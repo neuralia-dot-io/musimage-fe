@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "109137996575",
+    "project_id": "neuralia-musimage",
+    "storage_bucket": "neuralia-musimage.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:109137996575:android:23db84691a94838ff59e2a",
+        "android_client_info": {
+          "package_name": "io.neuralia.musimage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "109137996575-eltfev2vkte52cekmdpcbnasqidgitt8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.neuralia.musimage",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "109137996575-3f8q6tksao2fj324hjmmh5c08q25dg2s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAw64EJ80Omaey4vRv6uCwmuKODA-vjyDs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "109137996575-3f8q6tksao2fj324hjmmh5c08q25dg2s.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "109137996575-1mmgbmofam9q5u55hb3n42aivca5b4nn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.neuralia.musimage"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

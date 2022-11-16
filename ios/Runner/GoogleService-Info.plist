@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>109137996575-1mmgbmofam9q5u55hb3n42aivca5b4nn.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.109137996575-1mmgbmofam9q5u55hb3n42aivca5b4nn</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>109137996575-eltfev2vkte52cekmdpcbnasqidgitt8.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCqJRZyFqiF7Z9y9nDJqKjR2OBnMKFiGGE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>109137996575</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>io.neuralia.musimage</string>
+	<key>PROJECT_ID</key>
+	<string>neuralia-musimage</string>
+	<key>STORAGE_BUCKET</key>
+	<string>neuralia-musimage.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:109137996575:ios:be44879e503e415df59e2a</string>
+</dict>
+</plist>
