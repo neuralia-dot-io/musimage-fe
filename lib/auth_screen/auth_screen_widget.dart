@@ -3,7 +3,6 @@ import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../custom_code/widgets/index.dart' as custom_widgets;
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -115,7 +114,7 @@ class _AuthScreenWidgetState extends State<AuthScreenWidget> {
                                 EdgeInsetsDirectional.fromSTEB(0, 0, 15, 0),
                             child: SelectionArea(
                                 child: Text(
-                              'by Neuralia',
+                              '© by Neuralia 2022',
                               textAlign: TextAlign.end,
                               style: FlutterFlowTheme.of(context)
                                   .bodyText1
@@ -128,28 +127,19 @@ class _AuthScreenWidgetState extends State<AuthScreenWidget> {
                           ),
                           Padding(
                             padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 0, 0, 15),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 5, 0, 0),
-                                  child: Container(
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.2,
-                                    height: 25,
-                                    child: custom_widgets.VersionText(
-                                      width: MediaQuery.of(context).size.width *
-                                          0.2,
-                                      height: 25,
-                                    ),
+                                EdgeInsetsDirectional.fromSTEB(0, 0, 15, 0),
+                            child: SelectionArea(
+                                child: Text(
+                              'v1.0.16',
+                              textAlign: TextAlign.end,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: 'Poppins',
+                                    color:
+                                        FlutterFlowTheme.of(context).grayIcon,
                                   ),
-                                ),
-                              ],
-                            ),
+                            )),
                           ),
                           Expanded(
                             child: DefaultTabController(
@@ -518,49 +508,65 @@ class _AuthScreenWidgetState extends State<AuthScreenWidget> {
                                                     ),
                                                   ),
                                                 ),
-                                                FFButtonWidget(
-                                                  onPressed: () async {
-                                                    if (emailAddressLoginController!
-                                                        .text.isEmpty) {
-                                                      ScaffoldMessenger.of(
-                                                              context)
-                                                          .showSnackBar(
-                                                        SnackBar(
-                                                          content: Text(
-                                                            'Email required!',
+                                                Row(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  children: [
+                                                    Expanded(
+                                                      child: FFButtonWidget(
+                                                        onPressed: () async {
+                                                          if (emailAddressLoginController!
+                                                              .text.isEmpty) {
+                                                            ScaffoldMessenger
+                                                                    .of(context)
+                                                                .showSnackBar(
+                                                              SnackBar(
+                                                                content: Text(
+                                                                  'Email required!',
+                                                                ),
+                                                              ),
+                                                            );
+                                                            return;
+                                                          }
+                                                          await resetPassword(
+                                                            email:
+                                                                emailAddressLoginController!
+                                                                    .text,
+                                                            context: context,
+                                                          );
+                                                        },
+                                                        text:
+                                                            'Forgot Password?',
+                                                        options:
+                                                            FFButtonOptions(
+                                                          width: 170,
+                                                          height: 40,
+                                                          color:
+                                                              Color(0x0039D2C0),
+                                                          textStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .subtitle1
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'Poppins',
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .tertiaryColor,
+                                                                    fontSize:
+                                                                        14,
+                                                                  ),
+                                                          elevation: 0,
+                                                          borderSide:
+                                                              BorderSide(
+                                                            color: Colors
+                                                                .transparent,
+                                                            width: 1,
                                                           ),
                                                         ),
-                                                      );
-                                                      return;
-                                                    }
-                                                    await resetPassword(
-                                                      email:
-                                                          emailAddressLoginController!
-                                                              .text,
-                                                      context: context,
-                                                    );
-                                                  },
-                                                  text: 'Forgot Password?',
-                                                  options: FFButtonOptions(
-                                                    width: 170,
-                                                    height: 40,
-                                                    color: Color(0x0039D2C0),
-                                                    textStyle: FlutterFlowTheme
-                                                            .of(context)
-                                                        .subtitle1
-                                                        .override(
-                                                          fontFamily: 'Poppins',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .tertiaryColor,
-                                                          fontSize: 14,
-                                                        ),
-                                                    elevation: 0,
-                                                    borderSide: BorderSide(
-                                                      color: Colors.transparent,
-                                                      width: 1,
+                                                      ),
                                                     ),
-                                                  ),
+                                                  ],
                                                 ),
                                               ],
                                             ),

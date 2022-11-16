@@ -232,7 +232,7 @@ class _GenImageScreenWidgetState extends State<GenImageScreenWidget>
                           color: Color(0xFFCB39CB),
                         ),
                         title: Text(
-                          'Enter Coupon Code',
+                          'Get Superpowers',
                           textAlign: TextAlign.start,
                           style: FlutterFlowTheme.of(context).title3.override(
                                 fontFamily: 'Poppins',
@@ -887,7 +887,7 @@ class _GenImageScreenWidgetState extends State<GenImageScreenWidget>
                                                   0, 0, 15, 0),
                                           child: SelectionArea(
                                               child: Text(
-                                            'by Neuralia',
+                                            '© by Neuralia 2022',
                                             textAlign: TextAlign.end,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText1
@@ -902,34 +902,20 @@ class _GenImageScreenWidgetState extends State<GenImageScreenWidget>
                                         Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  0, 0, 0, 15),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(0, 5, 0, 0),
-                                                child: Container(
-                                                  width: MediaQuery.of(context)
-                                                          .size
-                                                          .width *
-                                                      0.2,
-                                                  height: 25,
-                                                  child: custom_widgets
-                                                      .VersionText(
-                                                    width:
-                                                        MediaQuery.of(context)
-                                                                .size
-                                                                .width *
-                                                            0.2,
-                                                    height: 25,
-                                                  ),
+                                                  0, 0, 15, 0),
+                                          child: SelectionArea(
+                                              child: Text(
+                                            'v1.0.16',
+                                            textAlign: TextAlign.end,
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
+                                                .override(
+                                                  fontFamily: 'Poppins',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .grayIcon,
                                                 ),
-                                              ),
-                                            ],
-                                          ),
+                                          )),
                                         ),
                                       ],
                                     ),

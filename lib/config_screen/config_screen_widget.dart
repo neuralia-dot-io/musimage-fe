@@ -95,7 +95,7 @@ class _ConfigScreenWidgetState extends State<ConfigScreenWidget> {
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
                             child: Text(
-                              'SignUp',
+                              'SignUp Enabled',
                               style: FlutterFlowTheme.of(context)
                                   .bodyText1
                                   .override(
@@ -140,7 +140,7 @@ class _ConfigScreenWidgetState extends State<ConfigScreenWidget> {
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
                             child: Text(
-                              'Maintenance',
+                              'Maintenance Mode',
                               style: FlutterFlowTheme.of(context)
                                   .bodyText1
                                   .override(
@@ -164,7 +164,7 @@ class _ConfigScreenWidgetState extends State<ConfigScreenWidget> {
                             ),
                             child: Checkbox(
                               value: checkboxWipValue ??=
-                                  configScreenConfigRecord.signup!,
+                                  configScreenConfigRecord.isWip!,
                               onChanged: (newValue) async {
                                 setState(() => checkboxWipValue = newValue!);
                               },

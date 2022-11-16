@@ -8,7 +8,6 @@ import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../flutter_flow/upload_media.dart';
 import '../custom_code/actions/index.dart' as actions;
-import '../custom_code/widgets/index.dart' as custom_widgets;
 import '../flutter_flow/custom_functions.dart' as functions;
 import 'package:badges/badges.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -185,7 +184,7 @@ class _GenMusicScreenWidgetState extends State<GenMusicScreenWidget> {
                           color: Color(0xFFCB39CB),
                         ),
                         title: Text(
-                          'Enter Coupon Code',
+                          'Get Superpowers',
                           textAlign: TextAlign.start,
                           style: FlutterFlowTheme.of(context).title3.override(
                                 fontFamily: 'Poppins',
@@ -824,7 +823,7 @@ class _GenMusicScreenWidgetState extends State<GenMusicScreenWidget> {
                                                   0, 0, 15, 0),
                                           child: SelectionArea(
                                               child: Text(
-                                            'by Neuralia',
+                                            '© by Neuralia 2022',
                                             textAlign: TextAlign.end,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText1
@@ -836,33 +835,23 @@ class _GenMusicScreenWidgetState extends State<GenMusicScreenWidget> {
                                                 ),
                                           )),
                                         ),
-                                        Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          children: [
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(0, 5, 0, 0),
-                                              child: Container(
-                                                width: MediaQuery.of(context)
-                                                        .size
-                                                        .width *
-                                                    0.2,
-                                                height: 25,
-                                                child:
-                                                    custom_widgets.VersionText(
-                                                  width: MediaQuery.of(context)
-                                                          .size
-                                                          .width *
-                                                      0.2,
-                                                  height: 25,
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0, 0, 15, 0),
+                                          child: SelectionArea(
+                                              child: Text(
+                                            'v1.0.16',
+                                            textAlign: TextAlign.end,
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyText1
+                                                .override(
+                                                  fontFamily: 'Poppins',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .grayIcon,
                                                 ),
-                                              ),
-                                            ),
-                                          ],
+                                          )),
                                         ),
                                       ],
                                     ),

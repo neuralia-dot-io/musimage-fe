@@ -17,7 +17,6 @@ class OnboardingScreenWidget extends StatefulWidget {
 
 class _OnboardingScreenWidgetState extends State<OnboardingScreenWidget> {
   PageController? pageViewController;
-  bool? checkboxValue;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -48,14 +47,18 @@ class _OnboardingScreenWidgetState extends State<OnboardingScreenWidget> {
                       ),
                 )),
               ),
-              SelectionArea(
-                  child: Text(
-                'Swipe or press the slides indicator to view all onboarding pills',
-                style: FlutterFlowTheme.of(context).bodyText1.override(
-                      fontFamily: 'Poppins',
-                      color: FlutterFlowTheme.of(context).grayIcon,
-                    ),
-              )),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(25, 0, 25, 0),
+                child: SelectionArea(
+                    child: Text(
+                  'Swipe or press the slides indicator to view all onboarding pills',
+                  textAlign: TextAlign.center,
+                  style: FlutterFlowTheme.of(context).bodyText1.override(
+                        fontFamily: 'Poppins',
+                        color: FlutterFlowTheme.of(context).grayIcon,
+                      ),
+                )),
+              ),
               Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -401,15 +404,10 @@ class _OnboardingScreenWidgetState extends State<OnboardingScreenWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
                           child: FFButtonWidget(
                             onPressed: () async {
-                              context.pushNamed('ServiceScreen');
+                              setState(() =>
+                                  FFAppState().onboardingCompleted = true);
 
-                              if (checkboxValue!) {
-                                setState(() =>
-                                    FFAppState().onboardingCompleted = true);
-                                return;
-                              } else {
-                                return;
-                              }
+                              context.pushNamed('ServiceScreen');
                             },
                             text: 'START GENERATING!',
                             options: FFButtonOptions(
@@ -433,41 +431,6 @@ class _OnboardingScreenWidgetState extends State<OnboardingScreenWidget> {
                               borderRadius: BorderRadius.circular(50),
                             ),
                           ),
-                        ),
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Theme(
-                              data: ThemeData(
-                                checkboxTheme: CheckboxThemeData(
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(0),
-                                  ),
-                                ),
-                                unselectedWidgetColor:
-                                    FlutterFlowTheme.of(context).grayIcon,
-                              ),
-                              child: Checkbox(
-                                value: checkboxValue ??= false,
-                                onChanged: (newValue) async {
-                                  setState(() => checkboxValue = newValue!);
-                                },
-                                activeColor:
-                                    FlutterFlowTheme.of(context).primaryColor,
-                              ),
-                            ),
-                            SelectionArea(
-                                child: Text(
-                              'Don\'t show anymore',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyText1
-                                  .override(
-                                    fontFamily: 'Poppins',
-                                    color:
-                                        FlutterFlowTheme.of(context).lineColor,
-                                  ),
-                            )),
-                          ],
                         ),
                       ],
                     ),
